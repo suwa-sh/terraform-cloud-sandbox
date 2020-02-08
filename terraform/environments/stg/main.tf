@@ -31,8 +31,8 @@ resource "aws_vpc" "vpc" {
   cidr_block                       = "10.100.0.0/16"
   enable_classiclink               = "false"
   enable_classiclink_dns_support   = "false"
-  enable_dns_hostnames             = "false"
-  enable_dns_support               = "false"
+  enable_dns_hostnames             = "${var.new_var}"
+  enable_dns_support               = "${var.new_var}"
   instance_tenancy                 = "default"
 
   tags = {
